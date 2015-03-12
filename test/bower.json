@@ -1,9 +1,0 @@
-{
-  "name": "ripley6811-github-io",
-  "private": true,
-  "dependencies": {
-    "chai": "~1.8.0",
-    "mocha": "~1.14.0"
-  },
-  "devDependencies": {}
-}

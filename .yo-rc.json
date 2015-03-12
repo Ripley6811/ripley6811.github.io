@@ -1,3 +1,13 @@
 {
-  "generator-mocha": {}
+  "generator-assemble": {
+    "projectName": "ripley6811 github io",
+    "projectDesc": "The best project ever.",
+    "authorLogin": "Ripley6811",
+    "installPlugin": false,
+    "author": {
+      "name": "Jay W Johnson",
+      "login": "assemble",
+      "email": "jwj@boun.cr"
+    }
+  }
 }
