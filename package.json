@@ -1,19 +1,36 @@
 {
-  "name": "hexo-site",
+  "name": "simple-blog",
   "version": "0.0.0",
-  "private": true,
-  "hexo": {
-    "version": "3.0.0"
+  "description": "My awesome site.",
+  "scripts": {
+    "start": "grunt server",
+    "ghpages": "grunt ghpages"
+  },
+  "homepage": "http://github.com/Ripley6811/simple-blog",
+  "bugs": "http://github.com/Ripley6811/simple-blog/issues",
+  "author": {
+    "name": "Jay W Johnson",
+    "email": "",
+    "url": "https://github.com/Ripley6811"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Ripley6811/simple-blog.git"
   },
   "dependencies": {
-    "hexo": "^3.0.0",
-    "hexo-generator-archive": "^0.1.0",
-    "hexo-generator-category": "^0.1.0",
-    "hexo-generator-index": "^0.1.0",
-    "hexo-generator-tag": "^0.1.0",
-    "hexo-renderer-ejs": "^0.1.0",
-    "hexo-renderer-stylus": "^0.2.0",
-    "hexo-renderer-marked": "^0.2.4",
-    "hexo-server": "^0.1.2"
+
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-browserify": "~1.2.0",
+    "grunt-gh-pages": "~0.6.0",
+    "grunt-ejs": "~0.1.0",
+    "debowerify": "~0.1.3"
   }
 }
