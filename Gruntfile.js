@@ -1,81 +1,81 @@
-module.exports = function(grunt) {
-  grunt.initConfig({
-    
-    clean: ['dist'],
+module.exports = function (grunt) {
+    grunt.initConfig({
 
-    ejs: {
-      all: {
-        options: {
-          // site-wide vars here
+        clean: ['dist'],
+
+        ejs: {
+            all: {
+                options: {
+                    // site-wide vars here
+                },
+                src: ['**/*.ejs', '!_*/*.ejs', '!node_modules/**/*', '!_*/**/*'],
+                dest: '',
+                expand: true,
+                ext: '.html',
+            },
         },
-        src: ['**/*.ejs', '!node_modules/**/*', '!_*/**/*'],
-        dest: '',
-        expand: true,
-        ext: '.html',
-      },
-    },
 
-    copy: {
-      all: {
-        src: ['*.css', '*.html', 'images/**/*', 'img/**/*', '!Gruntfile.js'],
-        dest: 'dist/',
-      },
-    },
+        copy: {
+            all: {
+                src: ['*.css', '*.html', 'images/**/*', 'img/**/*', '!Gruntfile.js'],
+                dest: 'dist/',
+            },
+        },
 
-    browserify: {
-      all: {
-        src: 'app.js',
-        dest: 'dist/app.js'
-      },
-      options: {
-        transform: ['debowerify']
-      }
-    },
+        browserify: {
+            all: {
+                src: 'app.js',
+                dest: 'dist/app.js'
+            },
+            options: {
+                transform: ['debowerify']
+            }
+        },
 
-    connect: {
-      options: {
-        port: process.env.PORT || 3131,
-        base: '',
-      },
+        connect: {
+            options: {
+                port: process.env.PORT || 3131,
+                base: '',
+            },
 
-      all: {},
-    },
+            all: {},
+        },
 
-    watch: {
-      options: {
-        livereload: true
-      },
+        watch: {
+            options: {
+                livereload: true
+            },
 
-      html: {
-        files: '<%= ejs.all.src %>',
-        tasks: ['ejs'],
-      },
+            html: {
+                files: '<%= ejs.all.src %>',
+                tasks: ['ejs'],
+            },
 
-      js: {
-        files: '<%= browserify.all.src %>',
-        tasks: ['browserify'],
-      },
+            js: {
+                files: '<%= browserify.all.src %>',
+                tasks: ['browserify'],
+            },
 
-      assets: {
-        files: ['assets/**/*', '*.css', '*.js', 'images/**/*', 'img/**/*', '!Gruntfile.js'],
-        tasks: ['copy'],
-      }
-    },
+            assets: {
+                files: ['assets/**/*', '*.css', '*.js', 'images/**/*', 'img/**/*', '!Gruntfile.js'],
+                tasks: ['copy'],
+            }
+        },
 
-    'gh-pages': {
-      options: {
-        base: 'dist/'
-      },
-      src: ['**/*']
-    }
-  });
+        'gh-pages': {
+            options: {
+                base: 'dist/'
+            },
+            src: ['**/*']
+        }
+    });
 
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-  
-  grunt.registerTask('default', ['clean', 'ejs', 'browserify', 'copy']);
-  
-  grunt.registerTask('server', ['default', 'connect', 'watch']);
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask('deploy', ['default', 'gh-pages']);
+    grunt.registerTask('default', ['clean', 'ejs', 'browserify', 'copy']);
+
+    grunt.registerTask('server', ['default', 'connect', 'watch']);
+
+    grunt.registerTask('deploy', ['default', 'gh-pages']);
 
 };

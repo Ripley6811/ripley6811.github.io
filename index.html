@@ -6,20 +6,537 @@
     <title>Simple Blog</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/knockout-3.3.0.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <script type="text/javascript" src="js/knockout-3.3.0.js"></script>
-    
-    <div class="container-fluid">
-    <div class="jumbotron">
-        <h1>Hello</h1>
-        This is the beginning of the blog
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-5">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-5">
+                        <div class="panel" style="overflow: hidden; padding: 0px; height: 300px; max-width: 300px">
+                            <div class="inner">
+                                <img style="display: block; margin: auto" src="https://lh3.googleusercontent.com/-RHs_weXHS0c/AAAAAAAAAAI/AAAAAAAAML0/zfATVd_Qh2A/photo.jpg?sz=300" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xs-7">
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Interests</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <ul>
+                                    <li>Scientific Computing</li>
+                                    <li>Data-driven Applications</li>
+                                    <li>Remote Sensing & Sensors</li>
+                                    <li>Structure From Motion</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Education</strong>
+                            </div>
+                            <div class="panel-body text-center" style="padding: 4px">
+                                <a data-toggle="modal" data-target="#myUCSB">
+                                    <img src="img/ucsbwave_144.jpg"
+                                         width="100"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="University of California, Santa Barbara">
+                                </a>
+                                <a data-toggle="modal" data-target="#myNCKU">
+                                    <img src="img/NCKU_logoword.png"
+                                         width="140"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="National Cheng Kung University">
+                                </a>
+                                <a data-toggle="modal" data-target="#myHPU">
+                                    <img src="img/HPU_symbol.png"
+                                         width="78"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="Hawai'i Pacific University">
+                                </a>
+                                <a data-toggle="modal" data-target="#myDLI">
+                                    <img src="img/DLI_shield.png"
+                                         width="78"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="Defense Language Institute Foreign Language Center">
+                                </a>
+                                <a data-toggle="modal" data-target="#myUDAC">
+                                    <img src="img/udacity_symbol.jpeg"
+                                         width="78"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="Udacity">
+                                </a>
+                                <a data-toggle="modal" data-target="#myUMUC">
+                                    <img src="img/umuc_logo.gif"
+                                         width="110"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="University of Maryland, University College">
+                                </a>
+                                <a data-toggle="modal" data-target="#myJHU">
+                                    <img src="img/johns_symbol.png"
+                                         width="78"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="Johns Hopkins University">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-7">
+                <div class="row">
+
+                    <div class="col-md-12 hidden-xs">
+                        <div class="panel semi-trans share-tech-mono text-center">
+                            <h2>
+                                <em>
+                                    "Try to learn something about everything and everything about something."
+                                    <br>
+                                </em>
+                                    -Thomas Huxley
+                                <br>
+                                <em class="hidden">
+                                    "The scientific imagination always restrains itself within the limits of probability."
+                                    <br>
+                                    -Thomas Huxley
+                                </em>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Versatile Programmer</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <ul>
+                                    <li>Data Cleansing & Analysis</li>
+                                    <li>Database Design</li>
+                                    <li>Multiple View Geometry</li>
+                                    <li>Computational Fluid Dynamics</li>
+                                    <li>Computational Investing</li>
+                                    <li>Data-driven Web Applications</li>
+                                    <li>PDF and Form Automation</li>
+                                    <li>Excel Validation and Programming</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Projects</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <ul>
+                                    <li><strong>TAIMAO:</strong> Data-driven Web-based Business Application</li>
+                                    <li><strong>TAIMAO:</strong> MySQL Database and Application</li>
+                                    <li><strong>UDACITY:</strong> Linux, Apache2, PostgreSQL, and Python Server Configuration</li>
+                                    <li><strong>NCKU:</strong> Ladybug3 Spherical Camera Application</li>
+                                    <li><strong>NAVY:</strong> Data Munger and Search Engine</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Life-long Learner</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <ul>
+                                    <li>Chinese Mandarin</li>
+                                    <li>Recurve archery</li>
+                                    <li>Online courses</li>
+                                    <li>Program optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Artistic Skills</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <ul>
+                                    <li>Photography <a type="button" class="btn btn-xs btn-primary" href="https://plus.google.com/103462204803093999285/posts">Google+ Posts</a></li>
+                                    <li>Computer art <a type="button" class="btn btn-xs btn-primary" href="http://codepen.io/Ripley6811/">CodePen.io Demos</a></li>
+                                    <li>Ceramic art</li>
+                                    <li>Music</li>
+                                    <li>Dance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Computer Skills</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <div id="skills" data-bind="foreach: skills">
+    <div class="progress" style="margin-bottom: 4px">
+      <div class="progress-bar text-left" role="progressbar"
+           aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+           style="text-align: left !important; padding-left: 4px"
+           data-bind="style: {width: level + '%',
+                      'background-color': $parent.toColor(level)}">
+         <span data-bind="text: skill"></span>
+      </div>
     </div>
-</div> 
+</div>
+
+<script type="text/javascript" src="js/skills.js"></script>
+<script>
+var viewModel = {
+    skills: skills,
+    toColor: function (level) {
+        var r,g,b;
+        r = 2*(100-level);
+        g = 3*(100-level);
+        b = 160;
+        var col = ['rgb(',r,',',g,',',b,')'].join('');
+        console.log(col);
+        return col;
+    }
+}
+
+ko.applyBindings(viewModel, document.getElementById('skills'));
+</script>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script id="live-reload" src="http://localhost:35729/livereload.js"></script>
-    <script src="app.js"></script>
+<!--    <script src="app.js"></script>-->
+
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
+
+
+
+<!-- Modal UCSB -->
+<div class="modal fade" id="myUCSB" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center eb-garamond">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+    </button>
+    <h2 class="modal-title" id="myModalLabel">
+        University of California, Santa Barbara
+    </h2>
+    <h3 class="modal-title" id="myModalLabel">
+        Department of Music
+    </h3>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-sm-5">
+<h4>Highlights</h4>
+<ul>
+    <li>BA in Music Theory</li>
+    <li>9 Math and Java Courses</li>
+    <li>6 <strong>French</strong> and <strong>German</strong> Courses</li>
+    <li>Member of <strong>Fencing</strong> Club</li>
+    <li>Percussion Ensemble (Marimba)</li>
+    <li>Cappella Choir (Baritone)</li>
+</ul>
+</div>
+<div class="col-sm-7 h4">
+    I excelled in mathematics in high school and was accepted to the <strong>physics</strong>
+    department at UCSB. I took many math and science courses but having played
+    piano and flute since fifth grade I was also interested in music.
+    I became more and more involved in the music department and eventually walked
+    away with a B.A. degree in <strong>music theory</strong>.
+    <br><br>
+    I started learning <strong>Java</strong> programming during this time. The
+    emphasis was on basic <strong>data structures</strong> and <strong>sequential data files</strong>.
+    In my free time I was an avid <strong>marimbist</strong> and studied <strong>fencing</strong>.
+</div>
+</div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal NCKU -->
+<div class="modal fade" id="myNCKU" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+    </button>
+    <h2 class="modal-title eb-garamond" id="myModalLabel">
+        National Cheng Kung University, Taiwan
+    </h2>
+    <h3 class="modal-title eb-garamond" id="myModalLabel">
+        Department of Earth Sciences
+    </h3>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-5">
+            <h4>Notable Courses</h4>
+            <ul>
+                <li>Image Processing (with IDL)</li>
+                <li>Remote Sensing Imagery Analysis</li>
+                <li>Remote Sensing of Ocean Color</li>
+                <li>Data Reduction (with IDL)</li>
+                <li>Numerical Analysis</li>
+                <li>Fluid Dynamics (CFD)</li>
+                <li>2D Shallow Water Modeling</li>
+                <li>Geographic Information Science (GIS)</li>
+                <li>Ocean Wind Wave Analysis</li>
+                <li>Observational Seismology</li>
+            </ul>
+        </div>
+<div class="col-sm-7 h4">
+    I left the Navy with an interest in <strong>satellite imagery</strong> and
+    programming. I was excited to be accepted to the Earth Sciences department
+    and to join the <strong>remote sensing laboratory</strong>. I dove into
+    <strong>IDL</strong> programming and using <strong>ENVI</strong> software.
+    I also started to teach myself <strong>Python</strong> at this time and how
+    to use it for <strong>ArcGIS</strong> scripts, image processing and many other
+    tasks.
+    <br><br>
+    My <em><strong>thesis project</strong></em> was to write software to effectively use a car-mounted
+    panoramic camera (Ladybug3 Spherical Camera) in analyzing landslide imagery.
+    The goal was to use <strong>GPS</strong> and structure-from-motion (<strong>SFM</strong>)
+    techniques to estimate
+    landslide scale from video images and to process multiple videos to make a
+    <strong>time-series</strong> of landslide imagery.
+</div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal HPU -->
+<div class="modal fade" id="myHPU" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+    </button>
+    <h2 class="modal-title eb-garamond" id="myModalLabel">
+        Hawai'i Pacific University
+    </h2>
+    <h3 class="modal-title eb-garamond" id="myModalLabel">
+        Department of Computer Science
+    </h3>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-5">
+            <h4>Courses Include:</h4>
+            <ul>
+                <li>Statistics</li>
+                <li>Data Structures</li>
+                <li>C#</li>
+                <li>Discrete Mathematics</li>
+                <li>Calculus</li>
+            </ul>
+        </div>
+<div class="col-sm-7 h4">
+    While in the Navy, I was stationed on Oahu and I took nine courses in math and
+    programming at HPU in my free time. Most classes were taught using <strong>Java</strong>
+    and emphasized documentation with the Unified Modeling Language (<strong>UML</strong>).
+</div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal DLI -->
+<div class="modal fade" id="myDLI" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+    </button>
+    <h2 class="modal-title eb-garamond" id="myModalLabel">Defense Language Institute</h2>
+    <h3 class="modal-title eb-garamond" id="myModalLabel">Foreign Language Center</h3>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-sm-5">
+<h4>Highlights</h4>
+<ul>
+    <li>Commencement Speaker</li>
+    <li>AA Degree in Chinese Mandarin</li>
+    <li>Top score on exit exam</li>
+    <li>Marksmanship Medal (M9 Pistol)</li>
+    <li>Peer tutoring</li>
+</ul>
+</div>
+<div class="col-sm-7 h4">
+    After getting a B.A. in Music Theory, I saw an ad about becoming a
+    <strong>linguist</strong> for the <strong>U.S. Navy</strong> that
+    required nothing but an aptitude for learning languages and of course being
+    within physical fitness requirements. Get <em>paid to learn</em> a language, get in shape and <em>serve my country</em> all sounded great.
+    I decided pretty quickly that I would join and pour myself into studying <strong>Chinese Mandarin</strong>.
+    I finished at the top of my class and gave the <strong>commencement speech</strong> in Chinese.
+    <br><br>
+    I regularly tutored my peers and also compiled study materials, distributing disks to anyone who wanted them.
+</div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal Udacity -->
+<div class="modal fade" id="myUDAC" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+    </button>
+    <h2 class="modal-title eb-garamond" id="myModalLabel">Udacity</h2>
+    <h3 class="modal-title eb-garamond" id="myModalLabel">Front-End Web Developer Nanodegree</h3>
+    <h3 class="modal-title eb-garamond" id="myModalLabel">Full Stack Web Developer Nanodegree</h3>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-sm-5">
+<h4>Topics Studied</h4>
+<ul>
+    <li>Artificial Intelligence for Robotics</li>
+    <li>Website Performance Optimization</li>
+    <li>Object-Oriented JavaScript</li>
+    <li>Bootstrap</li>
+    <li>KnockoutJS</li>
+    <li>Grunt</li>
+    <li>Flask + SQLAlchemy</li>
+    <li>Linux + Apache2 Server</li>
+    <li>Server Configuration</li>
+</ul>
+</div>
+<div class="col-sm-7 h4">
+    I completed Udacity's <strong>Artificial Intelligence</strong> for Robotics course while in graduate
+    school in Taiwan. It covered automated localization and mapping algorithms
+    (<strong>SLAM, A<superscript>*</superscript></strong>) which was applicable
+    to my research project.
+    <br><br>
+    Later, I was developing a database and business application for a chemical
+    company and decided to advance my <strong>data-driven web</strong> skills by completing both
+    of Udacity's
+    <em>Front-End Developer</em> and <em>Full Stack Developer</em> series of
+    courses and projects.
+</div>
+</div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal UMUC -->
+<div class="modal fade" id="myUMUC" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+    </button>
+    <h2 class="modal-title eb-garamond" id="myModalLabel">University of Maryland University College</h2>
+    <h3 class="modal-title eb-garamond" id="myModalLabel">Financial Management and Information Systems</h3>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-sm-6">
+<h4>Courses</h4>
+<ul>
+    <li>Principles of Accounting I, II</li>
+    <li>Accounting Software</li>
+    <li>Taxation of Individuals</li>
+    <li>Security Software and Hardware Assurance</li>
+    <li>Financial Decision Making for Managers</li>
+    <li>Financial Management for Organizations</li>
+</ul>
+</div>
+<div class="col-sm-6 h4">
+    While in the U.S. Navy, there was a time when I was interested in studying
+    finance. I enrolled in a <strong>Master of Science</strong> program and took a few courses in
+    <strong>accounting software</strong> and <strong>financial management</strong>.
+</div>
+</div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal JHU -->
+<div class="modal fade" id="myJHU" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+    </button>
+    <h2 class="modal-title eb-garamond" id="myModalLabel">Johns Hopkins University</h2>
+    <h3 class="modal-title eb-garamond" id="myModalLabel">Data Science Specialization</h3>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-sm-5">
+<h4>Courses Completed</h4>
+<ul>
+    <li>Intro to Data Science and Tools</li>
+    <li>R Programming</li>
+    <li>Getting and Cleaning Data</li>
+    <li>Exploratory Data Analysis</li>
+    <li>Reproducible Research</li>
+    <li>Statistical Inference</li>
+    <li>Regression Models</li>
+</ul>
+</div>
+<div class="col-sm-7 h4">
+    I enjoy <strong>analysis</strong> and <strong>statistics</strong>. When I found a
+    data science series of ten courses offered by Johns Hopkins University
+    on <strong>Coursera</strong>, I decided to enroll and see if the field is a good
+    fit for me. I've enjoyed the courses so far but I've been busy with developing a database application for work
+    and caring for two kids. I intend to finish the last three courses when
+    I have time. All classes used the <strong>R</strong> programming language
+    and required producing reports with <strong>RMarkdown</strong>.
+</div>
+</div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
 </body>
 
 </html>

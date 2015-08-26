@@ -1,7 +1,58 @@
 body {
-    background-color: #00003b;
+    background-color: #000030;
+    font-family: calibri;
 }
 
+/*
 .jumbotron {
     background-color: rgba(165, 255, 255, 0.54);
+}
+*/
+
+.semi-trans {
+    background-color: rgba(69, 69, 142, 0.5);
+    color: aliceblue;
+}
+
+.share-tech-mono {font-family: 'Share Tech Mono' !important;}
+
+.eb-garamond {font-family: 'EB Garamond', serif !important;}
+
+.panel {
+    border: 4px outset;
+    border-radius: 10px;
+/*    padding: 6px;*/
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+div.outer {
+/*    width: 300px;  some width amount needed */
+    margin: 0 auto;
+    overflow: visible;
+}
+div.inner {
+    display: inline-block;
+    position:relative;
+    right: -50%;
+}
+div.inner img {
+    position: relative;
+    left:-50%;
+}
+
+ul {
+    padding-left: 16px;
+}
+
+.progress-bar-high {
+    background-color: darkblue
+}
+
+.progress-bar-low {
+    background-color: cornflowerblue
+}
+
+a:hover {
+    cursor: pointer
 }

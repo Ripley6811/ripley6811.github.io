@@ -1,0 +1,2 @@
+- Turn "artistic skills" and other lists into modals with descriptions, images and links
+
