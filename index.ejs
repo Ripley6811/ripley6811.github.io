@@ -6,15 +6,274 @@
     <title>Simple Blog</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/knockout-3.3.0.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <script type="text/javascript" src="js/knockout-3.3.0.js"></script>
-    
-    <% include _templates/header %> 
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-5">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-5">
+                        <div class="panel" style="overflow: hidden; padding: 0px; height: 300px; max-width: 300px">
+                            <div class="inner">
+                                <img style="display: block; margin: auto" src="https://lh3.googleusercontent.com/-RHs_weXHS0c/AAAAAAAAAAI/AAAAAAAAML0/zfATVd_Qh2A/photo.jpg?sz=300" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xs-7">
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Interests</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <ul>
+                                    <li>Scientific Computing</li>
+                                    <li>Data-driven Applications</li>
+                                    <li>Remote Sensing & Sensors</li>
+                                    <li>Structure From Motion</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Education</strong>
+                            </div>
+                            <div class="panel-body text-center" style="padding: 4px">
+                                <a data-toggle="modal" data-target="#myUCSB">
+                                    <img src="img/ucsbwave_144.jpg"
+                                         width="100"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="University of California, Santa Barbara">
+                                </a>
+                                <a data-toggle="modal" data-target="#myNCKU">
+                                    <img src="img/NCKU_logoword.png"
+                                         width="140"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="National Cheng Kung University">
+                                </a>
+                                <a data-toggle="modal" data-target="#myHPU">
+                                    <img src="img/HPU_symbol.png"
+                                         width="78"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="Hawai'i Pacific University">
+                                </a>
+                                <a data-toggle="modal" data-target="#myDLI">
+                                    <img src="img/DLI_shield.png"
+                                         width="78"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="Defense Language Institute Foreign Language Center">
+                                </a>
+                                <a data-toggle="modal" data-target="#myUDAC">
+                                    <img src="img/udacity_symbol.jpeg"
+                                         width="78"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="Udacity">
+                                </a>
+                                <a data-toggle="modal" data-target="#myUMUC">
+                                    <img src="img/umuc_logo.gif"
+                                         width="110"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="University of Maryland, University College">
+                                </a>
+                                <a data-toggle="modal" data-target="#myJHU">
+                                    <img src="img/johns_symbol.png"
+                                         width="78"
+                                         data-toggle="tooltip"
+                                         data-placement="top"
+                                         title="Johns Hopkins University">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-7">
+                <div class="row">
+
+                    <div class="col-md-12 hidden-xs">
+                        <div class="panel semi-trans share-tech-mono text-center">
+                            <h2>
+                                <em>
+                                    "Try to learn something about everything and everything about something."
+                                    <br>
+                                </em>
+                                    -Thomas Huxley
+                                <br>
+                                <em class="hidden">
+                                    "The scientific imagination always restrains itself within the limits of probability."
+                                    <br>
+                                    -Thomas Huxley
+                                </em>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Versatile Programmer</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <ul>
+                                    <li>Data Cleansing & Analysis</li>
+                                    <li>Database Design</li>
+                                    <li>Multiple View Geometry</li>
+                                    <li>Computational Fluid Dynamics</li>
+                                    <li>Computational Investing</li>
+                                    <li>Data-driven Web Applications</li>
+                                    <li>PDF and Form Automation</li>
+                                    <li>Excel Validation and Programming</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Projects</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <ul>
+                                    <li><strong>TAIMAO:</strong> Data-driven Web-based Business Application</li>
+                                    <li><strong>TAIMAO:</strong> MySQL Database and Application</li>
+                                    <li><strong>UDACITY:</strong> Linux, Apache2, PostgreSQL, and Python Server Configuration</li>
+                                    <li><strong>NCKU:</strong> Ladybug3 Spherical Camera Application</li>
+                                    <li><strong>NAVY:</strong> Data Munger and Search Engine</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Life-long Learner</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <ul>
+                                    <li>Chinese Mandarin</li>
+                                    <li>Recurve archery</li>
+                                    <li>Online courses</li>
+                                    <li>Program optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Artistic Skills</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <ul>
+                                    <li>Photography <a type="button" class="btn btn-xs btn-primary" href="https://plus.google.com/103462204803093999285/posts">Google+ Posts</a></li>
+                                    <li>Computer art <a type="button" class="btn btn-xs btn-primary" href="http://codepen.io/Ripley6811/">CodePen.io Demos</a></li>
+                                    <li>Ceramic art</li>
+                                    <li>Music</li>
+                                    <li>Dance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Computer Skills</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 4px">
+                                <% include _templates/skills %>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script id="live-reload" src="http://localhost:35729/livereload.js"></script>
-    <script src="app.js"></script>
+<!--    <script src="app.js"></script>-->
+
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
+
+
+
+<!-- Modal UCSB -->
+<div class="modal fade" id="myUCSB" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <% include _templates/modal_UCSB_content %>
+        </div>
+    </div>
+</div>
+
+<!-- Modal NCKU -->
+<div class="modal fade" id="myNCKU" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <% include _templates/modal_NCKU_content %>
+        </div>
+    </div>
+</div>
+
+<!-- Modal HPU -->
+<div class="modal fade" id="myHPU" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <% include _templates/modal_HPU_content %>
+        </div>
+    </div>
+</div>
+
+<!-- Modal DLI -->
+<div class="modal fade" id="myDLI" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <% include _templates/modal_DLIFLC_content %>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Udacity -->
+<div class="modal fade" id="myUDAC" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <% include _templates/modal_Udacity_content %>
+        </div>
+    </div>
+</div>
+
+<!-- Modal UMUC -->
+<div class="modal fade" id="myUMUC" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <% include _templates/modal_UMUC_content %>
+        </div>
+    </div>
+</div>
+
+<!-- Modal JHU -->
+<div class="modal fade" id="myJHU" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <% include _templates/modal_JHU_content %>
+        </div>
+    </div>
+</div>
+
+
 </body>
 
 </html>
