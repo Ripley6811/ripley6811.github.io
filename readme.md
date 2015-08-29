@@ -14,5 +14,5 @@
 - `index.html` is placed in root directory instead of `dist` folder.
 - To *compile* web site:
   - `>grunt`
-- To *watch* for changes while displaying a live view:
+- To *watch* and compile changes while displaying a live view:
   - `>grunt server`
