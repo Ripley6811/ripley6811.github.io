@@ -1,4 +1,4 @@
-# My Front Page
+# My Front Page & Interactive Resumé
 
 ###http://ripley6811.github.io/
 
