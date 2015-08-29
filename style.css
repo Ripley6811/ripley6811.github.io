@@ -53,6 +53,18 @@ ul {
     background-color: cornflowerblue
 }
 
-a:hover {
+a:hover, td:hover {
     cursor: pointer
+}
+
+.table {
+    margin-bottom: 0px
+}
+
+.tooltip-inner {
+    background-color: rgb(74, 29, 149);
+}
+
+.tooltip-arrow {
+    opacity: 0
 }

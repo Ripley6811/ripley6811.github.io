@@ -104,23 +104,131 @@
 
                     <div class="col-md-12 hidden-xs">
                         <div class="panel semi-trans share-tech-mono text-center">
-                            <h2>
-                                <em>
-                                    "Try to learn something about everything and everything about something."
-                                    <br>
-                                </em>
-                                    -Thomas Huxley
-                                <br>
-                                <em class="hidden">
-                                    "The scientific imagination always restrains itself within the limits of probability."
-                                    <br>
-                                    -Thomas Huxley
-                                </em>
-                            </h2>
+                            <div id="quotes-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" data-bind="foreach: quotes">
+        <div class="item" data-bind="css: {'active': $index() === 0}">
+            <h2>
+            <em data-bind="text: quote"></em>
+            <span data-bind="visible: br"><br></span>
+            -<span data-bind="text: name"></span>
+          </h2>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/quotes.js"></script>
+<script>
+var viewModel = {
+    quotes: quotes
+}
+
+ko.applyBindings(viewModel, document.getElementById('quotes-carousel'));
+</script>
+
                         </div>
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>I Can ...</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 0px">
+                                <table class="table table-condensed table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <td data-toggle="tooltip"
+                                                data-placement="left"
+                                                title="Linux, Apache2, MySQL, Python (LAMP)">
+                                                Configure an Apache Server
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-toggle="tooltip"
+                                                data-placement="left"
+                                                title="MySQL, PostgreSQL, Design, Migration">
+                                                Develop a SQL Database
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-toggle="tooltip"
+                                                data-placement="left"
+                                                title="JavaScript, KnockoutJS">
+                                                Write a Data-Driven Front-End
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-toggle="tooltip"
+                                                data-placement="left"
+                                                title="OpenCV+Python, VPython">
+                                                Research Image/Video Processing
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-toggle="tooltip"
+                                                data-placement="left"
+                                                title="SailsJS+Waterline, Flask+SQLAlchemy, GAE">
+                                                Create a Full-Stack Web App
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading share-tech-mono text-center">
+                                <strong>Projects</strong>
+                            </div>
+                            <div class="panel-body" style="padding: 0px">
+                                <table class="table table-condensed table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <td data-toggle="tooltip"
+                                                data-placement="left"
+                                                title="SailsJS+Waterline, KnockoutJS">
+                                                <strong>TAIMAO:</strong> Data-driven Web-based Business Application
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-toggle="tooltip"
+                                                data-placement="left"
+                                                title="Python, Tkinter, SQLAlchemy, MySQL, MatPlotLib">
+                                                <strong>TAIMAO:</strong> MySQL Database and Application
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-toggle="tooltip"
+                                                data-placement="left"
+                                                title="Flask+SQLAlchemy, KnockoutJS, SSH, Ubuntu 14">
+                                                <strong>UDACITY:</strong> Linux, Apache2, PostgreSQL, and Python Server Configuration
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-toggle="tooltip"
+                                                data-placement="left"
+                                                title="Python, Tkinter, PIL, Ctypes, OpenCV, MatPlotLib">
+                                                <strong>NCKU:</strong> Ladybug3 Spherical Camera Image Processing Application
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-toggle="tooltip"
+                                                data-placement="left"
+                                                title="Java, Swing GUI">
+                                                <strong>NAVY:</strong> Data Munger and Search Engine
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>THIS SITE:</strong> Built using GruntJS, EJS, KnockoutJS, and Bootstrap
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-4">
                         <div class="panel panel-default">
                             <div class="panel-heading share-tech-mono text-center">
@@ -141,29 +249,15 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading share-tech-mono text-center">
-                                <strong>Projects</strong>
-                            </div>
-                            <div class="panel-body" style="padding: 4px">
-                                <ul>
-                                    <li><strong>TAIMAO:</strong> Data-driven Web-based Business Application</li>
-                                    <li><strong>TAIMAO:</strong> MySQL Database and Application</li>
-                                    <li><strong>UDACITY:</strong> Linux, Apache2, PostgreSQL, and Python Server Configuration</li>
-                                    <li><strong>NCKU:</strong> Ladybug3 Spherical Camera Application</li>
-                                    <li><strong>NAVY:</strong> Data Munger and Search Engine</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading share-tech-mono text-center">
                                 <strong>Life-long Learner</strong>
+                                <br>[Hobbies]
                             </div>
                             <div class="panel-body" style="padding: 4px">
                                 <ul>
                                     <li>Chinese Mandarin</li>
-                                    <li>Recurve archery</li>
-                                    <li>Online courses</li>
+                                    <li>Recurve Archery</li>
+                                    <li>Computational Science</li>
+                                    <li>Online Courses</li>
                                     <li>Program optimization</li>
                                 </ul>
                             </div>
@@ -524,10 +618,11 @@ ko.applyBindings(viewModel, document.getElementById('skills'));
     I enjoy <strong>analysis</strong> and <strong>statistics</strong>. When I found a
     data science series of ten courses offered by Johns Hopkins University
     on <strong>Coursera</strong>, I decided to enroll and see if the field is a good
-    fit for me. I've enjoyed the courses so far but I've been busy with developing a database application for work
-    and caring for two kids. I intend to finish the last three courses when
-    I have time. All classes used the <strong>R</strong> programming language
+    fit for me. All classes used the <strong>R</strong> programming language
     and required producing reports with <strong>RMarkdown</strong>.
+    I've completed 7 out of 10 courses and enjoyed them so far but I need
+    to find time between work and two kids to complete the last three.
+
 </div>
 </div>
 </div>

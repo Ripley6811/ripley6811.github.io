@@ -1,5 +1,5 @@
 // Keep level at 40+
-// Level determined by how confident and quick I am at finding solutions.
+// Level determined by how confident and expeditious I am at finding solutions.
 var skills = [
     {skill: 'Python', level: 100},
     {skill: 'KnockoutJS MVVM', level: 100},
