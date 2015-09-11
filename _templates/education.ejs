@@ -1,113 +1,50 @@
-<a data-toggle="modal" data-target="#myUCSB">
-    <img src="img/ucsbwave_140.jpg"
-         width="100"
-         data-toggle="tooltip"
-         data-placement="top"
-         title="University of California, Santa Barbara">
-</a>
-<a data-toggle="modal" data-target="#myNCKU">
-    <img src="img/NCKU_logoword_140.png"
-         width="140"
-         data-toggle="tooltip"
-         data-placement="top"
-         title="National Cheng Kung University">
-</a>
-<a data-toggle="modal" data-target="#myHPU">
-    <img src="img/HPU_symbol.png"
-         width="78"
-         data-toggle="tooltip"
-         data-placement="top"
-         title="Hawai'i Pacific University">
-</a>
-<a data-toggle="modal" data-target="#myDLI">
-    <img src="img/DLI_shield_100.png"
-         width="78"
-         data-toggle="tooltip"
-         data-placement="top"
-         title="Defense Language Institute Foreign Language Center">
-</a>
-<a data-toggle="modal" data-target="#myUDAC">
-    <img src="img/udacity_symbol.jpeg"
-         width="78"
-         data-toggle="tooltip"
-         data-placement="top"
-         title="Udacity">
-</a>
-<a data-toggle="modal" data-target="#myUMUC">
-    <img src="img/umuc_logo.gif"
-         width="110"
-         data-toggle="tooltip"
-         data-placement="top"
-         title="University of Maryland, University College">
-</a>
-<a data-toggle="modal" data-target="#myJHU">
-    <img src="img/johns_symbol.png"
-         width="78"
-         data-toggle="tooltip"
-         data-placement="top"
-         title="Johns Hopkins University">
-</a>
 
+<div id="education-panel-body" data-bind="foreach: edu_data">
+    <a data-toggle="modal"
+       data-bind="attr: {'data-target': '#' + school}">
+        <img data-bind="attr: {src: img.src, width: img.width, title: title}"
+             data-toggle="tooltip"
+             data-placement="top">
+    </a>
 
-<!-- Modal UCSB -->
-<div class="modal fade" id="myUCSB" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <% include education/modal_UCSB_content %>
+    <div class="modal fade" tabindex="-1" role="dialog"
+         data-bind="attr: {id: school}">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h2 class="modal-title eb-garamond" data-bind="text: title"></h2>
+                    <h3 class="modal-title eb-garamond" data-bind="text: subtitle"></h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-5" data-bind="html: highlights"></div>
+                        <div class="col-sm-7 h4" data-bind="html: description"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- Modal NCKU -->
-<div class="modal fade" id="myNCKU" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <% include education/modal_NCKU_content %>
-        </div>
-    </div>
-</div>
+<script>
+    var edu_data = ko.observableArray(),
+        req = new XMLHttpRequest();
 
-<!-- Modal HPU -->
-<div class="modal fade" id="myHPU" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <% include education/modal_HPU_content %>
-        </div>
-    </div>
-</div>
+    // Get education json data for array.
+    req.onreadystatechange = function () {
+        if ((req.readyState == 4) && (req.status == 200)) {  // if DONE and SUCCESS
+            var data = JSON.parse(req.responseText);
+            // Add each school data to KO array
+            data.schools.forEach(function (each) {edu_data.push(each);});
+        }
+    };
+    req.open("GET", "_templates/education/data.js", true);
+    req.send();
 
-<!-- Modal DLI -->
-<div class="modal fade" id="myDLI" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <% include education/modal_DLIFLC_content %>
-        </div>
-    </div>
-</div>
+    // Apply bindings to this content
+    ko.applyBindings(this, document.getElementById('education-panel-body'));
+</script>
 
-<!-- Modal Udacity -->
-<div class="modal fade" id="myUDAC" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <% include education/modal_Udacity_content %>
-        </div>
-    </div>
-</div>
 
-<!-- Modal UMUC -->
-<div class="modal fade" id="myUMUC" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <% include education/modal_UMUC_content %>
-        </div>
-    </div>
-</div>
-
-<!-- Modal JHU -->
-<div class="modal fade" id="myJHU" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <% include education/modal_JHU_content %>
-        </div>
-    </div>
-</div>
