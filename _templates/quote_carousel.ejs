@@ -1,14 +1,16 @@
-<div id="quotes-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+<div class="panel semi-trans share-tech-mono text-center">
+  <div id="quotes-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox" data-bind="foreach: quotes">
-        <div class="item" data-bind="css: {'active': $index() === 0}">
-            <h2>
+      <div class="item" data-bind="css: {'active': $index() === 0}">
+        <h2>
             <em data-bind="text: quote"></em>
             <span data-bind="visible: br"><br></span>
             -<span data-bind="text: name"></span>
           </h2>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <script type="text/javascript" src="js/quotes.js"></script>

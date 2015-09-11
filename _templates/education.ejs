@@ -1,31 +1,35 @@
+<div class="panel panel-default">
+  <div class="panel-heading share-tech-mono text-center">
+    <strong>Education</strong>
+  </div>
+  <div class="panel-body" style="padding: 4px">
+    <div id="education-panel-body" data-bind="foreach: edu_data">
+      <!-- Iterate over each school's data -->
+      <a data-toggle="modal" data-bind="attr: {'data-target': '#' + school}">
+        <img data-bind="attr: {src: img.src, width: img.width, title: title}" data-toggle="tooltip" data-placement="top">
+      </a>
 
-<div id="education-panel-body" data-bind="foreach: edu_data">
-    <a data-toggle="modal"
-       data-bind="attr: {'data-target': '#' + school}">
-        <img data-bind="attr: {src: img.src, width: img.width, title: title}"
-             data-toggle="tooltip"
-             data-placement="top">
-    </a>
-
-    <div class="modal fade" tabindex="-1" role="dialog"
-         data-bind="attr: {id: school}">
+      <div class="modal fade" tabindex="-1" role="dialog" data-bind="attr: {id: school}">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                    </button>
-                    <h2 class="modal-title eb-garamond" data-bind="text: title"></h2>
-                    <h3 class="modal-title eb-garamond" data-bind="text: subtitle"></h3>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-5" data-bind="html: highlights"></div>
-                        <div class="col-sm-7 h4" data-bind="html: description"></div>
-                    </div>
-                </div>
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+              </button>
+              <h2 class="modal-title eb-garamond" data-bind="text: title"></h2>
+              <h3 class="modal-title eb-garamond" data-bind="text: subtitle"></h3>
             </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-sm-5" data-bind="html: highlights"></div>
+                <div class="col-sm-7 h4" data-bind="html: description"></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <!-- "foreach" ends -->
     </div>
+  </div>
 </div>
 
 <script>

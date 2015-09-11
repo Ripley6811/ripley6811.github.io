@@ -20,216 +20,37 @@
             <div class="col-md-3 col-sm-5">
                 <div class="row">
                     <div class="col-sm-12 col-xs-5">
-                        <div class="panel" style="overflow: hidden; padding: 0px; height: 300px; max-width: 300px">
-                            <div class="inner">
-                                <img style="display: block; margin: auto" src="https://lh3.googleusercontent.com/-RHs_weXHS0c/AAAAAAAAAAI/AAAAAAAAML0/zfATVd_Qh2A/photo.jpg?sz=300" />
-                            </div>
-                        </div>
+                        <% include _templates/headshot %>
                     </div>
                     <div class="col-sm-12 col-xs-7">
-                        <div class="panel panel-default">
-                            <div class="panel-heading share-tech-mono text-center">
-                                <strong>Interests</strong>
-                            </div>
-                            <div class="panel-body" style="padding: 4px">
-                                <ul>
-                                    <li>Scientific Computing</li>
-                                    <li>Data-driven Applications</li>
-                                    <li>Remote Sensing & Sensors</li>
-                                    <li>Structure From Motion</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading share-tech-mono text-center">
-                                <strong>Education</strong>
-                            </div>
-                            <div class="panel-body" style="padding: 4px">
-                                <% include _templates/education %>
-                            </div>
-                        </div>
+                        <% include _templates/interests %>
+                        <% include _templates/education %>
                     </div>
                 </div>
             </div>
             <div class="col-md-9 col-sm-7">
                 <div class="row">
                     <div class="col-md-12 hidden-xs">
-                        <div class="panel semi-trans share-tech-mono text-center">
-                            <% include _templates/quote_carousel %>
-                        </div>
+                        <% include _templates/quote_carousel %>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 hidden-xs">
-                        <div class="jumbotron h4 text-center" style="padding: 20px 60px">
-Jay W J is an ex-<strong>Navy Chinese linguist</strong> and <strong>remote sensing researcher</strong>
-transitioning
-to a career in <strong>software and full-stack development</strong>. He is particularly
-interested in scientific computing, image processing and database applications and has experience
-with scripting and writing GUIs in
-multiple programming languages.
-                        </div>
+                        <% include _templates/bio_summary %>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading share-tech-mono text-center">
-                                <strong>I Can ...</strong>
-                            </div>
-                            <div class="panel-body" style="padding: 0px">
-                                <table class="table table-condensed table-hover">
-                                    <tbody>
-                                        <tr>
-                                            <td data-toggle="tooltip"
-                                                data-placement="left"
-                                                title="Linux, Apache2, MySQL, Python (LAMP)">
-                                                Configure an Apache Server
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-toggle="tooltip"
-                                                data-placement="left"
-                                                title="MySQL, PostgreSQL, Design, Migration">
-                                                Develop a SQL Database
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-toggle="tooltip"
-                                                data-placement="left"
-                                                title="JavaScript, KnockoutJS">
-                                                Write a Data-Driven Front-End
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-toggle="tooltip"
-                                                data-placement="left"
-                                                title="OpenCV+Python, VPython">
-                                                Process Image/Video Data
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-toggle="tooltip"
-                                                data-placement="left"
-                                                title="SailsJS+Waterline, Flask+SQLAlchemy, GAE">
-                                                Create a Full-Stack Web App
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading share-tech-mono text-center">
-                                <strong>Projects</strong>
-                            </div>
-                            <div class="panel-body" style="padding: 0px">
-                                <table class="table table-condensed table-hover">
-                                    <tbody>
-                                        <tr>
-                                            <td data-toggle="tooltip"
-                                                data-placement="left"
-                                                title="SailsJS+Waterline, KnockoutJS">
-                                                <strong>TAIMAO:</strong> Data-driven Web-based Business Application
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-toggle="tooltip"
-                                                data-placement="left"
-                                                title="Python, Tkinter, SQLAlchemy, MySQL, MatPlotLib">
-                                                <strong>TAIMAO:</strong> MySQL Database and Application
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-toggle="tooltip"
-                                                data-placement="left"
-                                                title="Flask+SQLAlchemy, KnockoutJS, SSH, Ubuntu 14">
-                                                <strong>UDACITY:</strong> Linux, Apache2, PostgreSQL, and Python Server Configuration
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-toggle="tooltip"
-                                                data-placement="left"
-                                                title="Python, Tkinter, PIL, Ctypes, OpenCV, MatPlotLib">
-                                                <strong>NCKU:</strong> Ladybug3 Spherical Camera Image Processing Application
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-toggle="tooltip"
-                                                data-placement="left"
-                                                title="Java, Swing GUI">
-                                                <strong>NAVY:</strong> Data Munger and Search Engine
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>THIS SITE:</strong> Built using GruntJS, EJS, KnockoutJS, and Bootstrap
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <% include _templates/broad_skills %>
+                        <% include _templates/projects %>
                     </div>
                     <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading share-tech-mono text-center">
-                                <strong>Versatile Programmer</strong>
-                            </div>
-                            <div class="panel-body" style="padding: 4px">
-                                <ul>
-                                    <li>Data Cleansing & Analysis</li>
-                                    <li>Database Design</li>
-                                    <li>Multiple View Geometry</li>
-                                    <li>Computational Fluid Dynamics</li>
-                                    <li>Computational Investing</li>
-                                    <li>Data-driven Web Applications</li>
-                                    <li>PDF and Form Automation</li>
-                                    <li>Excel Validation and Programming</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading share-tech-mono text-center">
-                                <strong>Life-long Learner</strong>
-                                <br>[Hobbies]
-                            </div>
-                            <div class="panel-body" style="padding: 4px">
-                                <ul>
-                                    <li>Chinese Mandarin</li>
-                                    <li>Recurve Archery</li>
-                                    <li>Computational Science</li>
-                                    <li>Online Courses</li>
-                                    <li>Program optimization</li>
-                                    <li>Piano</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading share-tech-mono text-center">
-                                <strong>Artistic Skills</strong>
-                            </div>
-                            <div class="panel-body" style="padding: 4px">
-                                <ul>
-                                    <li>Photography <a type="button" class="btn btn-xs btn-primary" href="https://plus.google.com/103462204803093999285/posts">Google+ Posts</a></li>
-                                    <li>Computer art <a type="button" class="btn btn-xs btn-primary" href="http://codepen.io/Ripley6811/">CodePen.io Demos</a></li>
-                                    <li>Ceramic art</li>
-                                    <li>Music</li>
-                                    <li>Dance</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <% include _templates/versatility %>
+                        <% include _templates/hobbies %>
+                        <% include _templates/artistry %>
                     </div>
                     <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading share-tech-mono text-center">
-                                <strong>Computer Skills</strong>
-                            </div>
-                            <div class="panel-body" style="padding: 4px">
-                                <% include _templates/skills %>
-                            </div>
-                        </div>
-
+                        <% include _templates/skills %>
                     </div>
                 </div>
             </div>
@@ -244,10 +65,6 @@ multiple programming languages.
       $('[data-toggle="tooltip"]').tooltip()
     })
     </script>
-
-
-
-
 
 </body>
 
