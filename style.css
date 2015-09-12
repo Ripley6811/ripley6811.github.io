@@ -70,3 +70,11 @@ a:hover, td:hover {
     padding: 0px 3px;
     border: 0px;
 }
+
+#headshot-panel > a > i {
+    transition: all .15s ease-in-out;
+}
+
+#headshot-panel:hover > a > i {
+    font-size: 4em
+}
