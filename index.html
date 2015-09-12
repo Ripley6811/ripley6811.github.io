@@ -3,27 +3,38 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Simple Blog</title>
+    <title>Jay W Johnson</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="js/knockout-3.3.0.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="js/knockout-3.3.0.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
 </head>
 
 <body>
-    <br>
+    <br> 
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-5">
                 <div class="row">
                     <div class="col-sm-12 col-xs-5">
-                        <div class="panel" style="overflow: hidden; padding: 0px; height: 300px; max-width: 300px">
-  <div class="inner">
-    <img style="display: block; margin: auto" src="https://lh3.googleusercontent.com/-RHs_weXHS0c/AAAAAAAAAAI/AAAAAAAAML0/zfATVd_Qh2A/photo.jpg?sz=300" />
-  </div>
+                        <div id="headshot-panel" class="panel"
+     style="overflow: hidden; padding: 0px; height: 300px; max-width: 300px">
+    <div class="inner">
+        <img style="display: block; margin: auto" src="https://lh3.googleusercontent.com/-RHs_weXHS0c/AAAAAAAAAAI/AAAAAAAAML0/zfATVd_Qh2A/photo.jpg?sz=300" />
+    </div>
+    <a style="left: 20px" class="btn btn-success"
+       href="https://www.linkedin.com/in/jaywj">
+        <i class="fa fa-linkedin-square fa-3x"></i>
+    </a>
+    <a style="right: 20px" class="btn btn-success"
+       href="https://github.com/Ripley6811">
+        <i class="fa fa-github-square fa-3x"></i>
+    </a>
 </div>
 
                     </div>
@@ -327,16 +338,7 @@ ko.applyBindings(viewModel, document.getElementById('skills'));
             </div>
         </div>
     </div>
-
     <script id="live-reload" src="http://localhost:35729/livereload.js"></script>
-<!--    <script src="app.js"></script>-->
-
-    <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-    </script>
-
 </body>
 
 </html>

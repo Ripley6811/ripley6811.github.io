@@ -3,12 +3,6 @@ body {
     font-family: calibri;
 }
 
-/*
-.jumbotron {
-    background-color: rgba(165, 255, 255, 0.54);
-}
-*/
-
 .semi-trans {
     background-color: rgba(69, 69, 142, 0.5);
     color: aliceblue;
@@ -67,4 +61,12 @@ a:hover, td:hover {
 
 .tooltip-arrow {
     opacity: 0
+}
+
+#headshot-panel > a {
+    position: absolute;
+    bottom: 25px;
+    background-color: rgba(0, 140, 90, 0.0);
+    padding: 0px 3px;
+    border: 0px;
 }
