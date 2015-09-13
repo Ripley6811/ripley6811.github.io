@@ -6,7 +6,9 @@
     <div id="education-panel-body" data-bind="foreach: edu_data">
       <!-- Iterate over each school's data -->
       <a data-toggle="modal" data-bind="attr: {'data-target': '#' + school}">
-        <img data-bind="attr: {src: img.src, width: img.width, title: title}" data-toggle="tooltip" data-placement="top">
+        <img data-bind="attr: {src: img.src, width: img.width, title: title}"
+             data-toggle="tooltip"
+             data-placement="top">
       </a>
 
       <div class="modal fade" tabindex="-1" role="dialog" data-bind="attr: {id: school}">

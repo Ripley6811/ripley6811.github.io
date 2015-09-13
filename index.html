@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Jay W Johnson</title>
+    <title>Jay W Johnson Profile</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
@@ -15,8 +15,8 @@
     <script src="js/app.js"></script>
 </head>
 
-<body>
-    <br> 
+<body> 
+    <br>
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-5">
@@ -61,7 +61,9 @@
     <div id="education-panel-body" data-bind="foreach: edu_data">
       <!-- Iterate over each school's data -->
       <a data-toggle="modal" data-bind="attr: {'data-target': '#' + school}">
-        <img data-bind="attr: {src: img.src, width: img.width, title: title}" data-toggle="tooltip" data-placement="top">
+        <img data-bind="attr: {src: img.src, width: img.width, title: title}"
+             data-toggle="tooltip"
+             data-placement="top">
       </a>
 
       <div class="modal fade" tabindex="-1" role="dialog" data-bind="attr: {id: school}">
@@ -265,7 +267,10 @@ ko.applyBindings(viewModel, document.getElementById('quotes-carousel'));
   </div>
 </div>
 
-                        <div class="panel panel-default">
+                        <div class="panel panel-default"
+     data-toggle="tooltip"
+     data-placement="top"
+     title="Hobbies that I will probably continue for many years to come">
   <div class="panel-heading share-tech-mono text-center">
     <strong>Life-long Learner</strong>
     <br>[Hobbies]
@@ -288,7 +293,7 @@ ko.applyBindings(viewModel, document.getElementById('quotes-carousel'));
   </div>
   <div class="panel-body" style="padding: 4px">
     <ul>
-      <li>Photography <a type="button" class="btn btn-xs btn-primary" href="https://plus.google.com/103462204803093999285/posts"><img width="18px" src="img/logo-google-plus-white.svg"></i></a></li>
+      <li>Photography <a type="button" class="btn btn-xs btn-primary" href="https://plus.google.com/103462204803093999285/posts"><img width="20px" src="img/logo-google-plus-white.svg"></i></a></li>
         <li>Computer art <a type="button" class="btn btn-xs btn-primary" href="http://codepen.io/Ripley6811/"><i class="fa fa-codepen fa-lg"></i></a></li>
       <li>Ceramic art</li>
       <li>Music</li>
@@ -299,7 +304,10 @@ ko.applyBindings(viewModel, document.getElementById('quotes-carousel'));
 
                     </div>
                     <div class="col-md-4">
-                        <div class="panel panel-default">
+                        <div class="panel panel-default"
+     data-toggle="tooltip"
+     data-placement="top"
+     title="Based on how quickly I believe I can find solutions to problems">
   <div class="panel-heading share-tech-mono text-center">
     <strong>Computer Skills</strong>
   </div>
