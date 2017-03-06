@@ -16,3 +16,8 @@
   - `>grunt`
 - To *watch* and compile changes while displaying a live view:
   - `>grunt server`
+
+
+## TODO
+
+Mouseover replaced summary with link to github and list of tech used

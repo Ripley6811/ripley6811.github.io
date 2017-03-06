@@ -30,6 +30,7 @@
     "grunt-ejs": "~0.1.0",
     "grunt-gh-pages": "~0.6.0",
     "jquery": "^2.1.4",
-    "matchdep": "~0.1.2"
+    "matchdep": "~0.1.2",
+    "showdown": "^1.2.3"
   }
 }
